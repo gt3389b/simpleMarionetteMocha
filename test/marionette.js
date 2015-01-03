@@ -10,13 +10,7 @@ describe('AngryCats', function() {
     clientenv.setup(function() {
       //require('../assets/js/marionette');
       MyApp = new Backbone.Marionette.Application();
-      done();
-    });
-  });
-  
-  describe('collection view', function() {
 
-    it('test that view renders', function(done) {
       MyApp.addRegions({
         mainRegion: "#AppBase"
       });
@@ -33,14 +27,25 @@ describe('AngryCats', function() {
         MyApp.mainRegion.show(angryCatsView);
       });
 
-      var cats = new AngryCats([
+      cats = new AngryCats([
           new AngryCat({ name: 'Wet Cat', image_path: 'assets/images/cat2.jpg' }),
           new AngryCat({ name: 'Bitey Cat', image_path: 'assets/images/cat1.jpg' }),
           new AngryCat({ name: 'Surprised Cat', image_path: 'assets/images/cat3.jpg' })
       ]);
 
       MyApp.start({cats: cats});
-      
+      done();
+    });
+  });
+  
+  describe('collection view', function() {
+
+    it('test that view renders', function(done) {
+      $("#AppBase").find("tr").should.have.length(3);
+      done()
+    })
+
+    it('test that view rerenders with added model', function(done) {
       cats.add(new AngryCat({
         name: 'Cranky Cat',
         image_path: 'assets/images/cat4.jpg',
@@ -52,7 +57,7 @@ describe('AngryCats', function() {
          //console.log($("#AppBase").html());
          $("#AppBase").find("tr").should.have.length(4);
          done();
-       }, 5);
+       }, 1);
     });
   });
 });

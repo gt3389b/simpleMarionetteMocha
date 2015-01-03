@@ -27,13 +27,27 @@ describe('AngryCats', function() {
     });
 
     // use the fetched values from previous test
-    it('expects models with fields', function(done) {
+    it('expects models with fields', function() {
       for(i=0; i<cats.models.length; i++){
         expect(cats.models[i].attributes).keys('image_path', 'name', 'rank', 'vote');
       }
-      done();
     });
 
+    it('expects rank is incrementing', function() {
+      for(i=0; i<cats.models.length; i++){
+        expect(cats.models[i].attributes['rank']).is.equal(i+1);
+      }
+    });
+
+    it('add model', function() {
+      cats.add(new AngryCat({
+        name: 'Cranky Cat',
+        image_path: 'assets/images/cat4.jpg',
+        rank: cats.size() + 1
+      }));
+    
+      expect(cats.models.length).is.equal(4);
+    })
 
   });
 });
