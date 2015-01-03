@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 var sleep = require('sleep');
 
-describe('Marionette', function() {
+describe('AngryCats', function() {
   
   beforeEach(function(done) {
     clientenv.setup(function() {
@@ -14,7 +14,7 @@ describe('Marionette', function() {
     });
   });
   
-  describe('collection', function() {
+  describe('collection view', function() {
 
     it('test that view renders', function(done) {
       MyApp.addRegions({
