@@ -1,6 +1,6 @@
 # Simple Backbone.Marionette Mocha test example
 
-## How to execute
+## How to execute the test cases
 Either:
 ```bash
    npm run test
