@@ -16,7 +16,7 @@ describe('Marionette', function() {
   
   describe('collection', function() {
 
-    it('expects thrown Error if no regionId in options', function(done) {
+    it('test that view renders', function(done) {
       MyApp.addRegions({
         mainRegion: "#AppBase"
       });
@@ -49,10 +49,10 @@ describe('Marionette', function() {
 
       // Give some time for the view to render as they can be async
        setTimeout(function(){ 
-         // complete the async beforeEach
-         console.log($("#AppBase").html());
+         //console.log($("#AppBase").html());
+         $("#AppBase").find("tr").should.have.length(4);
          done();
-       }, 500);
+       }, 5);
     });
   });
 });
