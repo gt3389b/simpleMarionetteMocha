@@ -3,11 +3,11 @@
 ## How to execute the test cases
 Either:
 ```bash
-   npm run test
+   npm test
 ```
 
 ```bash
-   grunt 
+   grunt mochaTest
 ```
 
 ```bash

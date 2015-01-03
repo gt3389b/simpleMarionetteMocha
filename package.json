@@ -22,7 +22,7 @@
     "xmlhttprequest": "*"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt mochaTest"
   },
   "author": "leaker",
   "license": ""
