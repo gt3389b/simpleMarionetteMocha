@@ -1,7 +1,10 @@
 var jsdom = require ('jsdom');
 
 module.exports.setup = setup = function(callback) {
-  if(typeof window != 'undefined') return callback(window);
+  if(typeof window != 'undefined') {
+     if (callback) return callback(window);
+     return;
+  }
   
   // Setup a jsdom env and globally expose window along with other libraries
   jsdom.env({
@@ -36,7 +39,9 @@ module.exports.setup = setup = function(callback) {
       global.App = {};
 
       // Let's go!
-      callback();
+      if(callback) {
+         callback();
+      }
     }
   });
 }
