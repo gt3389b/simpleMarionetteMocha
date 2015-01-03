@@ -1,0 +1,29 @@
+{
+  "name": "SimpleMarionetteMocha",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a simple marionette mocha test example",
+  "keywords": [],
+  "dependencies": {
+    "marionette": "0.0.0"
+  },
+  "devDependencies": {
+    "backbone": "*",
+    "backbone.marionette": "*",
+    "chai": "*",
+    "grunt": "*",
+    "grunt-mocha-test": "*",
+    "handlebars": "*",
+    "jquery": "*",
+    "jsdom": "*",
+    "mocha": "*",
+    "underscore": "*",
+    "xmldom": "*",
+    "xmlhttprequest": "*"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "author": "leaker",
+  "license": ""
+}
