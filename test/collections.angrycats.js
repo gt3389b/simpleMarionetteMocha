@@ -1,4 +1,4 @@
-var clientenv = require('../client_env');
+var clientenv = require('./helper/client_env');
 var assert = require('chai').assert;
 var expect = require('chai').expect;
 var should = require('chai').should();
