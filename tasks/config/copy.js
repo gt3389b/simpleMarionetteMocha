@@ -22,7 +22,22 @@ module.exports = function(grunt) {
 				cwd: './assets',
 				src: ['**/*.!(coffee|less)'],
 				dest: '.tmp/public'
-			}]
+         },
+         {
+            expand: true,
+            cwd: './bower_components',
+            src: [
+               'underscore/underscore.js',
+               'backbone/backbone.js',
+               'jquery/dist/jquery.js',
+               'backbone.babysitter/lib/backbone.babysitter.js',
+               'backbone.wreqr/lib/backbone.wreqr.js',
+               'backbone.marionette/lib/backbone.marionette.js',
+               'handlebars/handlebars.js'
+            ],
+            flatten: true,
+            dest: '.tmp/public/js/dependencies'
+         }]
 		},
 		build: {
 			files: [{

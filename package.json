@@ -40,6 +40,7 @@
   "scripts": {
     "test": "grunt mochaTest"
   },
-  "author": "leaker",
+  "author": "Russell Leake",
+  "homepage": "https://github.com/gt3389b/simpleMarionetteMocha",
   "license": ""
 }

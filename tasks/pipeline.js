@@ -26,6 +26,14 @@ var jsFilesToInject = [
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
+  'js/dependencies/underscore.js',
+  'js/dependencies/jquery.js',
+  'js/dependencies/backbone.js',
+  'js/dependencies/handlebars.js',
+  'js/dependencies/backbone.babysitter.js',
+  'js/dependencies/backbone.wreqr.js',
+  'js/dependencies/backbone.marionette.js',
+
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 
